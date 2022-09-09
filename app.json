@@ -1,0 +1,7 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/algorithm-tree-level-order/index",
+    "pages/algorithm-sort-bubble/index"
+  ]
+}

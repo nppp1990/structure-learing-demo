@@ -1,0 +1,141 @@
+.v-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.h-flex {
+  display: flex;
+}
+
+.sort-source-parent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sort-source {
+  margin-right: 15px;
+  margin-top: 10px;
+  color: black;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background: white;
+}
+
+.sort-rectangle {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.sorted {
+  background: green;
+}
+
+.unSelected {
+  background: white;
+}
+
+.selected {
+  background: yellow;
+}
+
+.find-value-layout {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.find-value {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tips {
+  margin: 10px 20px;
+  font-size: 14px;
+  min-height: 60px;
+  word-break: break-all;
+}
+
+.divider {
+  background: black;
+  width: auto;
+  height: 1px;
+}
+
+.button-step-area {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.button-step {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 15px;
+  font-size: 14px;
+  background: white;
+}
+
+.button-step-hidden {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 4px 15px;
+  font-size: 14px;
+  color: transparent;
+}
+
+.button-hover {
+  background: #F2F2F2;
+}
+
+.button-disable {
+  background: #F2F2F2;
+  color: #C5C5C5;
+  border: 1px solid transparent;
+}
+
+.button-able {
+  background: white;
+}
+
+.button-step-reset {
+  color: red;
+}
+
+.button-play-area {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.button-play {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 15px;
+  font-size: 14px;
+  background: white;
+}
+
+.button-play-ic {
+  width: 20px;
+  height: 20px;
+}
+
+.button-play-text {
+  margin-left: 5px;
+}
+
+.speed-text {
+  font-size: 12px;
+  color: #0000007F;
+  padding-left: 25px;
+}
+
+.speed-slider {
+  flex: 1;
+}

@@ -1,0 +1,85 @@
+var indexOf = function (array, o) {
+  if (array === null || array === undefined) {
+    return -1;
+  }
+  return array.indexOf(o);
+}
+
+var hasPoint = function (i, points) {
+  if (points === null || points === undefined || points.length === 0) {
+    return false;
+  }
+  for (var j = 0; j < points.length; j++) {
+    if (points[j].index === i) {
+      return true;
+    }
+  }
+  return false;
+}
+
+var hasLine = function (lines, item) {
+  if (lines === null || lines === undefined) {
+    return false;
+  }
+
+  for (var i = 0; i < lines.length; i++) {
+    if (lines[i].key === item.key) {
+      return true;
+    }
+  }
+  return false;
+}
+
+var getPointStr = function (points) {
+  if (points.length === 0) {
+    return '[]';
+  }
+  var res = '[';
+  for (var i = 0; i < points.length; i++) {
+    if (i === points.length - 1) {
+      res += (points[i].data + ']');
+    } else {
+      res += (points[i].data + ',');
+    }
+  }
+  return res;
+}
+
+var getPointStrFromList = function (indexList, list) {
+  if (indexList.length === 0) {
+    return '[]';
+  }
+  var res = '[';
+  for (var i = 0; i < indexList.length; i++) {
+    if (i === indexList.length - 1) {
+      res += (list[indexList[i]].data + ']');
+    } else {
+      res += (list[indexList[i]].data + ',');
+    }
+  }
+  return res;
+}
+
+var isInRelation = function (indexs, i, j) {
+  if (indexs === null || indexs === undefined || indexs.length === 0) {
+    return false;
+  }
+  for (var k = 0; k < indexs.length; k++) {
+    if (i === indexs[k].i && j === indexs[k].j) {
+      return true;
+    }
+    if (i === indexs[k].j && j === indexs[k].i) {
+      return true;
+    }
+  }
+  return false;
+}
+
+module.exports = {
+  indexOf: indexOf,
+  hasPoint: hasPoint,
+  getPointStr: getPointStr,
+  getPointStrFromList: getPointStrFromList,
+  isInRelation: isInRelation,
+  hasLine: hasLine
+}

@@ -1,0 +1,2 @@
+<view style="margin:30px;" bindtap="tree_order">按层遍历</view>
+<view style="margin:30px; margin-left:20px" bindtap="bubble_sort">冒泡排序</view>

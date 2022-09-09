@@ -1,0 +1,47 @@
+<view>
+  <view class="sort-source-parent">
+    <view class="sort-source" hover-class="button-hover" bindtap="showCode">源代码</view>
+  </view>
+  <view class="sort-container">
+    <block wx:for="{{list}}" wx:key="index">
+      <view id="{{'id_' + index}}" class="sort-item">
+        <view wx:if="{{index > list.length -i-1 || i === list.length - 1}}"
+          class="sort-rectangle sorted"
+          style="width:{{itemWidth}}px;height:{{stepHeight + item * stepHeight}}px;" />
+        <view wx:elif="{{j===index || j+1 === index}}" class="sort-rectangle selected"
+          style="width:{{itemWidth}}px;height:{{stepHeight + item * stepHeight}}px;" />
+        <view wx:else class="sort-rectangle unSelected"
+          style="width:{{itemWidth}}px;height:{{stepHeight + item * stepHeight}}px;" />
+        <view class="{{j===index ? 'sort-value-index':'sort-value-default'}}">{{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="divider divider-margin" />
+
+  <view class="v-flex">
+    <text space="nbsp" class="tips">{{tips}}</text>
+  </view>
+
+  <view class="button-step-area">
+    <view class="button-step button-step-reset" hover-class="button-hover" bindtap="reset">重置</view>
+    <view class="button-step button-step-reset" hover-class="button-hover" bindtap="resetByRandom">
+      随机
+    </view>
+    <view class="button-step {{i<list.length -1?'button-able':'button-disable'}}"
+      hover-class="button-hover" bindtap="next">前进
+    </view>
+    <view class="button-step {{history.length>0?'button-able':'button-disable'}}"
+      hover-class="button-hover" bindtap="pre">后退
+    </view>
+  </view>
+  <view class="button-play-area">
+    <view class="button-play" bindtap="play">
+      <image class="button-play-ic" src="../../resources/ic_{{isShowPlay?'play':'pause'}}.svg" />
+      <view class="button-play-text">{{isShowPlay ? '播放' : '暂停'}}</view>
+    </view>
+    <view class="speed-text">设置速度</view>
+    <slider class="speed-slider" style="margin-left:10px; margin-right:0;" value="5"
+      bindchange="onSpeedChange" min="2" max="9" block-size="15" />
+  </view>
+</view>

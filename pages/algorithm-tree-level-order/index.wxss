@@ -1,0 +1,14 @@
+@import "../../common/algorithm.wxss";
+@import "../../common/tree.wxss";
+
+.tree-container {
+  height: 40%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.divider-margin {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
